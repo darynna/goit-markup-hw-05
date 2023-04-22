@@ -779,6 +779,18 @@ color: var(--hoover-color);
     
     border-radius: 50%;
     border: none;
+
+    color: black;
+}
+
+.svg-button{
+   fill: currentColor;
+}
+
+.modal-button:hover,
+.modal-button:focus{
+    background-color: var(--hoover-color);
+    color: var(--primary-bakground-color);
 }
 
 
