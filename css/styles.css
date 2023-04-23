@@ -538,10 +538,12 @@ color: var(--hoover-color);
 
 .flex-footer {
     display: flex;
-    gap: 120px;
     align-items: baseline;
 }
 
+.footer-description{
+    margin-right: 120px;
+}
 
 .social-title {
     margin-bottom: 16px;
@@ -625,7 +627,7 @@ color: var(--hoover-color);
     padding: 12px 24px;
 
 
-    transition-property: background-color, color;
+    transition-property: background-color, color, border-color, box-shadow;
     transition-duration: var(--transition-duration);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -714,7 +716,8 @@ color: var(--hoover-color);
     color: var(--secondary-background-color);
 }
 
-.portfolio-links:hover .portfolio-label{
+.portfolio-links:hover .portfolio-label,
+.portfolio-links:focus .portfolio-label{
     transform: translateY(0);
 }
 
@@ -738,7 +741,7 @@ color: var(--hoover-color);
     visibility: visible;
     pointer-events: initial;
 
-    transition: opacity var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1), visibility var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden{
@@ -774,15 +777,18 @@ color: var(--hoover-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     width: 24px;
     height: 24px;
     margin-left: auto;
+    cursor: pointer;
     
     border-radius: 50%;
     border: none;
 
     color: black;
+
+    transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1), background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-button{
